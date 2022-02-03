@@ -12,9 +12,11 @@ const { Navigator, Screen } = createBottomTabNavigator();
 
 
 const TabNavigator = () => (
-    <Navigator tabBar={props => <BottomTabBar {...props} />}>
+    <Navigator  tabBar={props => <BottomTabBar {...props} />}>
         <Screen name='HOME' component={HomeScreen}/>
-        <Screen name='SEARCH' component={SearchScreen}/>
+        <Screen options={{
+                headerShown: false,
+        }} name='SEARCH' component={SearchScreen}/>
         <Screen name='RADAR' component={RadarScreen}/>
         <Screen name='LIKED' component={LikedScreen}/>
         <Screen name='ACCOUNT' component={AccountScreen}/>

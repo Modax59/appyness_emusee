@@ -2,6 +2,7 @@ import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {BottomNavigation, BottomNavigationTab, Icon} from '@ui-kitten/components';
 import {ParamListBase, TabNavigationState} from "@react-navigation/native";
+import {StyleSheet} from "react-native";
 
 
 const {Navigator, Screen} = createBottomTabNavigator();
@@ -34,7 +35,8 @@ interface Props {
 const BottomTabBar = ({ navigation, state } : any) => (
     <BottomNavigation
         style={{
-            marginBottom: 25,
+            marginVertical: 15,
+
         }}
         selectedIndex={state.index}
         onSelect={index => navigation.navigate(state.routeNames[index])}>
@@ -47,3 +49,9 @@ const BottomTabBar = ({ navigation, state } : any) => (
 );
 
 export default BottomTabBar;
+
+const styles = StyleSheet.create({
+    bottomNavigation: {
+        marginVertical: 8,
+    },
+});
