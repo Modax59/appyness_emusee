@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Layout, Text} from "@ui-kitten/components";
+import {Button, Icon, Layout, Text} from "@ui-kitten/components";
 
 const HomeScreen = () => {
 
