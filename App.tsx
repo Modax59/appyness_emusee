@@ -1,6 +1,7 @@
 import React from 'react';
 import * as eva from '@eva-design/eva';
 import { ApplicationProvider, Layout, Text } from '@ui-kitten/components';
+import HomeScreen from "./app/screens/HomeScreen";
 
 export default function App() {
   return (
@@ -9,11 +10,5 @@ export default function App() {
       </ApplicationProvider>
   );
 }
-
-const HomeScreen = () => (
-    <Layout style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text category='h1'>HOME</Text>
-    </Layout>
-);
 
 
