@@ -51,7 +51,7 @@ const BottomTabBar = ({ navigation, state }: any) => (
   >
     <BottomNavigationTab icon={HomeIcon} title="HOME" />
     <BottomNavigationTab icon={SearchIcon} title="SEARCH" />
-    <BottomNavigationTab icon={RadarIcon} title="RADAR" />
+    
     <BottomNavigationTab icon={LikedIcon} title="LIKED" />
     <BottomNavigationTab icon={AccountIcon} title="ACCOUNT" />
   </BottomNavigation>

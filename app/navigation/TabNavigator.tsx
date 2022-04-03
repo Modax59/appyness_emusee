@@ -25,7 +25,7 @@ const TabNavigator = () => (
       name="SEARCH"
       component={SearchScreen}
     />
-    <Screen name="RADAR" component={RadarScreen} />
+
     <Screen name="LIKED" component={LikedScreen} />
     <Screen name="ACCOUNT" component={AccountScreen} />
   </Navigator>
