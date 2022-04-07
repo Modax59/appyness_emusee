@@ -18,13 +18,6 @@ const TabNavigator = () => (
       name="HOME"
       component={HomeScreen}
     />
-    <Screen
-      options={{
-        headerShown: false,
-      }}
-      name="SEARCH"
-      component={SearchScreen}
-    />
 
     <Screen name="LIKED" component={LikedScreen} />
     <Screen name="ACCOUNT" component={AccountScreen} />

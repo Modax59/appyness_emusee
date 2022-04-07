@@ -4,6 +4,7 @@ import {
   BottomNavigation,
   BottomNavigationTab,
   Icon,
+  Text,
 } from "@ui-kitten/components";
 import { ParamListBase, TabNavigationState } from "@react-navigation/native";
 import { StyleSheet } from "react-native";
@@ -31,27 +32,32 @@ const BottomTabBar = ({ navigation, state }: any) => (
   <BottomNavigation
     appearance="noIndicator"
     style={{
-      backgroundColor: "#fff",
+      backgroundColor: "#333",
       borderTopWidth: 0,
-      width: "90%",
+
+      width: "100%",
       borderBottomEndRadius: 20,
       borderBottomStartRadius: 20,
       borderTopLeftRadius: 20,
       borderTopRightRadius: 20,
       elevation: 0,
-      opacity: 0.8,
+
       position: "absolute",
-      left: 20,
+      left: 0,
       right: 50,
-      bottom: 60,
-      height: 50,
+      bottom: 0,
+      height: 70,
     }}
     selectedIndex={state.index}
-    onSelect={(index) => navigation.navigate(state.routeNames[index])}
+    onSelect={(index) => {
+      navigation.navigate(state.routeNames[index]);
+    }}
   >
-    <BottomNavigationTab icon={HomeIcon} title="HOME" />
-    <BottomNavigationTab icon={SearchIcon} title="SEARCH" />
-    
+    <BottomNavigationTab
+      icon={HomeIcon}
+      title={(evaProps) => <Text {...evaProps}>HOME</Text>}
+    />
+
     <BottomNavigationTab icon={LikedIcon} title="LIKED" />
     <BottomNavigationTab icon={AccountIcon} title="ACCOUNT" />
   </BottomNavigation>
@@ -61,6 +67,6 @@ export default BottomTabBar;
 
 const styles = StyleSheet.create({
   bottomNavigation: {
-    marginVertical: 8,
+    marginVertical: 15,
   },
 });
